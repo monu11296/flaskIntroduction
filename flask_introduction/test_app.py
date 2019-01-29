@@ -8,6 +8,6 @@ def app():
     return app.test_client()
 
 def test_app(app):
-    res1 = app.get("/")
-    assert res1.status_code == 200
-assert b"Welcome to Poe library!" in res1.data
+    response = app.get("/")
+    assert response.status_code == 200
+    assert b"Welcome to Poe library!" in response.data
